@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.warp {
+  width: 100%;
+  height: 100%;
+  background: url("../images/5a290fd508a60.png") no-repeat center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warp .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.warp .center .logo img {
+  width: 120px;
+  border-radius: 50%;
+}
+.warp .center .name {
+  font-size: 26px;
+  padding-top: 10px;
+}
+.warp .center .dec {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 312px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #999;
+}
+.warp .center .welcome {
+  font-size: 16px;
+  padding: 25px 0;
+}
+.warp .center .line {
+  width: 100px;
+  height: 1px;
+  background: #999;
+  margin-bottom: 40px;
+}
+.warp .center .list ul {
+  display: flex;
+}
+.warp .center .list ul li a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.warp .center .list ul li:nth-child(n+2) {
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */
