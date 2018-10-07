@@ -1,0 +1,9 @@
+main
+	标题
+	主要技术
+	时间
+	
+aside
+	个人 github、email
+	友情链接
+	文章归档

@@ -4,28 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Yunanime</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" media="screen" />
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/index.js"></script>
 </head>
 <body>
     <div class="warp">
-        <div class="center">
-            <div class="logo"><img src="./images/mimea.png" alt=""></div>
-            <p class="name">dm</p>
-            <span class="dec">标签注释</span>
-            <p class="welcome">欢迎来到我的个人主页~</p>
-            <div class="line"></div>
-            <div class="list">
-                <ul>
-                    <li><a href="#">个人网站</a></li>
-                    <li><a href="#">项目</a></li>
-                    <li><a href="#">笔记</a></li>
-                    <li><a href="#">建设中</a></li>
-                    <li><a href="#">建设中</a></li>
-                </ul>
+        <div class="center" id="mainbox">
+            <div class="main">
+                <img class="btn" src="./images/top.png" alt="">
+                <div class="logo"><img src="./images/mimea.png" alt=""></div>
+                <p class="name">dm</p>
+                <span class="dec">标签注释</span>
+                <p class="welcome">欢迎来到我的个人主页~</p>
+                <div class="line"></div>
+                <div class="list">
+                    <ul>
+                        <li><a href="./project.html">我的项目</a></li>
+                        <li><a href="./note.html">笔记</a></li>
+                        <li><a href="./mistake.html">错题</a></li>
+                        <li><a href="./collection.html">收藏</a></li>
+                        <li><a href="./other.html">其他</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="description">
+                <div class="user-name">
+                    <a href="https://www.pixiv.net/member.php?id=47488" target="_blank">
+                        <div class="picidname">P站ID</div>
+                        <div class="picid">123456</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script src="./js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        //图片对象
+        var picobj=[
+            {
+                url:"./images/pic-66568021.jpg",
+                id:66568021
+            },
+            {
+                url:"./images/pic-66697332.jpg",
+                id:66697332
+            },
+            {
+                url:"./images/pic-69250814.jpg",
+                id:69250814
+            },
+            {
+                url:"./images/pic-47565246.jpg",
+                id:47565246
+            },
+            {
+                url:"./images/pic-59266706.png",
+                id:59266706
+            },
+            {
+                url:"./images/pic-60637377.png",
+                id:60637377
+            },
+            {
+                url:"./images/pic-60914648.jpg",
+                id:60914648
+            },
+            {
+                url:"./images/pic-63754669.png",
+                id:63754669
+            },
+            {
+                url:"./images/pic-63950855.jpg",
+                id:63950855
+            },
+            {
+                url:"./images/pic-64535234.png",
+                id:64535234
+            }   
+        ]
+        var picindex=parseInt(Math.random()*10);
+        $(".warp").css("background-image","url("+picobj[picindex].url+")");
+        $(".picid").html(picobj[picindex].id);
+        $(".user-name a").attr("href","http://www.pixiv.net/member_illust.php?mode=medium&illust_id="+picobj[picindex].id)
+        clearInterval(t);
+        function change(){
+            if(picindex>= picobj.length-1){
+                picindex=0;
+            }
+            $(".warp").css("background-image","url("+picobj[picindex].url+")");
+            $(".picid").html(picobj[picindex].id);
+            $(".user-name a").attr("href","http://www.pixiv.net/member_illust.php?mode=medium&illust_id="+picobj[picindex].id)
+            picindex++;
+        }
+        var t=setInterval(change,10000);//开启定时器
+        
+        //点击按钮，收缩中间的div
+        $(".btn").click(function () {  
+            $(".center").toggleClass("changetop").animate({"top":"px"});
+        })
+        
+        //点击除了中间的div外的地方，切换图片
+        $(document).click(function (e) { 
+            var e = e || window.event; //浏览器兼容性 
+            var elem = e.target || e.srcElement;
+            while (elem) { //循环判断至跟节点，防止点击的是div子元素 
+                if (elem.id && elem.id == 'mainbox') {
+                    return;
+                }
+                elem = elem.parentNode;
+            }
+            e.stopPropagation();
+            clearInterval(t);
+            if(picindex>= picobj.length-1){
+                picindex=0;
+            }else{
+                picindex++;
+            }
+            $(".warp").css("background-image","url("+picobj[picindex].url+")");
+            $(".picid").html(picobj[picindex].id);
+            $(".user-name a").attr("href","http://www.pixiv.net/member_illust.php?mode=medium&illust_id="+picobj[picindex].id)
+            t=setInterval(change,10000);
+        })
+        $("center").click(function (e) {  
+            e.stopPropagation();
+        })
+    });
+    
+</script>

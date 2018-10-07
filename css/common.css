@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body,
+a,
+p,
+input,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+div,
+span,
+i,
+em,
+img,
+b,
+strong {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+input {
+  border: 0 none;
+  outline: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+.clear:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+.center {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+/*# sourceMappingURL=common.css.map */

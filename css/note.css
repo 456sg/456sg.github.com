@@ -1,0 +1,190 @@
+@charset "UTF-8";
+body {
+  background-color: #f2f3f5;
+}
+
+header {
+  width: 100%;
+  min-width: 950px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #f3f3f3;
+  box-shadow: 0 2px 6px 0 rgba(36, 33, 46, 0.06);
+  position: relative;
+  z-index: 2;
+}
+header nav ul li {
+  float: left;
+}
+header nav ul li a {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 56px;
+  padding: 0 25px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  color: #222;
+}
+header nav ul li a:hover {
+  background: #f2f2f2;
+  color: #8ec0db;
+  box-shadow: 0 -3px 0 #8ec0db inset;
+}
+header nav ul li a.active {
+  color: #8ec0db;
+  box-shadow: 0 -3px 0 #8ec0db inset;
+}
+header nav ul li .logo {
+  vertical-align: -4px;
+  width: 19px;
+  margin-right: 2px;
+}
+
+.warp {
+  margin-top: 35px;
+}
+.warp .center .main {
+  width: 730px;
+  min-height: 575px;
+  background: #fff;
+  float: left;
+  border-radius: 5px;
+}
+.warp .center .main .typetitle {
+  height: 25px;
+  background-color: #8ec0db;
+  border-radius: 5px 5px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 5px;
+  line-height: 25px;
+  color: #fff;
+}
+.warp .center .main .list {
+  width: 100%;
+  padding: 15px;
+  padding-top: 30px;
+}
+.warp .center .main .list li {
+  width: 100%;
+  margin-right: 23px;
+  height: 105px;
+  border-radius: 8px;
+  border-bottom: 1px #e1e4e8 solid;
+  margin-bottom: 14px;
+}
+.warp .center .main .list li .left a img {
+  width: 160px;
+  height: 90px;
+}
+.warp .center .main .list li .listbox {
+  width: 540px;
+  height: 90px;
+  padding: 0 10px;
+}
+.warp .center .main .list li .listbox .title a {
+  font-size: 18px;
+  color: #0593d3;
+}
+.warp .center .main .list li .listbox .title a:hover {
+  color: #0477ab;
+}
+.warp .center .main .list li .listbox .content {
+  width: 540px;
+  height: 66px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+  padding-top: 9px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /*此为两行，设置行数*/
+  -webkit-box-orient: vertical;
+  /*子元素垂直排列*/
+}
+.warp .center .aside {
+  width: 205px;
+  float: right;
+}
+.warp .center .aside .info {
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 0 10px;
+}
+.warp .center .aside .info .mylogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.warp .center .aside .info .myname {
+  margin-top: 10px;
+  text-align: center;
+}
+.warp .center .aside .info .leavetag {
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 165px;
+  height: 38px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.warp .center .aside .info .apic {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #d6dee5;
+  width: 165px;
+}
+.warp .center .aside .info .apic a {
+  display: inline-block;
+  margin-right: 5px;
+}
+.warp .center .aside .info .apic a:hover {
+  transition: all 1s;
+  transform: rotate(360deg);
+}
+.warp .center .aside .info .apic img {
+  width: 25px;
+}
+.warp .center .aside .info .apic .sina img {
+  width: 31px;
+}
+.warp .center .aside .info .asidenav {
+  text-align: left;
+  margin-top: 5px;
+}
+.warp .center .aside .info .asidenav li a {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+.warp .center .aside .info .asidenav li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #fff;
+  height: 90px;
+  margin-top: 183px;
+  text-align: center;
+  box-shadow: 0 -2px 36px 0 rgba(36, 33, 46, 0.06);
+  border-top: 1px solid #f3f3f3;
+}
+footer a {
+  display: block;
+  text-align: center;
+  color: #666;
+  padding-top: 20px;
+}
+
+/*# sourceMappingURL=note.css.map */
